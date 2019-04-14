@@ -26,7 +26,7 @@ trait AppConf {
   val userTable= "recommend.user"
   val ratingTable= "recommend.rating"
   val mysqlusername = "root"
-  val mysqlpassword = "1234"
+  val mysqlpassword = "root"
   val prop = new Properties
   prop.put("driver", "com.mysql.jdbc.Driver")
   prop.put("user", mysqlusername)

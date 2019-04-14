@@ -1,0 +1,67 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------< [0;36mcom.zxl:Spark_Movie[0;1m >-------------------------[m
+[[1;34mINFO[m] [1mBuilding Spark_Movie 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mSpark_Movie[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (ANSI_X3.4-1968 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /usr/local/src/movie_recommend/Spark_Movie/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mSpark_Movie[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-scala-plugin:2.15.2:compile[m [1m(scala-compile-first)[m @ [36mSpark_Movie[0;1m ---[m
+[[1;34mINFO[m] Checking for multiple versions of scala
+[[1;33mWARNING[m]  Expected all dependencies to require Scala version: 2.11.8
+[[1;33mWARNING[m]  com.twitter:chill_2.10:0.5.0 requires scala version: 2.10.4
+[[1;33mWARNING[m] Multiple versions of scala libraries detected!
+[[1;34mINFO[m] includes = [**/*.scala,]
+[[1;34mINFO[m] excludes = []
+[[1;34mINFO[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala:-1: info: compiling
+[[1;34mINFO[m] Compiling 50 source files to /usr/local/src/movie_recommend/Spark_Movie/target/classes at 1555204987762
+[[1;31mERROR[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/ml/RecommendForAllUsers.scala:60: error: value save is not a member of org.apache.spark.sql.DataFrame
+[[1;34mINFO[m]       uidDF.save("org.apache.phoenix.spark", SaveMode.Overwrite, Map("table" -> "phoenix_rec", "zkUrl" -> "localhost:2181"))
+[[1;34mINFO[m]             ^
+[[1;31mERROR[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/streaming/KafkaProducer.scala:32: error: Unable to find encoder for type stored in a Dataset.  Primitive types (Int, String, etc) and Product types (case classes) are supported by importing spark.implicits._  Support for serializing other types will be added in future releases.
+[[1;34mINFO[m]     val testData = testDF.map(x => (topic, x.getInt(0).toString() + "," + x.getInt(1).toString + "," + x.getDouble(2).toString()))
+[[1;34mINFO[m]                              ^
+[[1;33mWARNING[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/streaming/SparkDrStream.scala:46: warning: This catches all Throwables. If this is really intended, use `case e : Throwable` to clear this warning.
+[[1;34mINFO[m]           case e => e.printStackTrace()
+[[1;34mINFO[m]                ^
+[[1;33mWARNING[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/streaming/SparkDrStream.scala:111: warning: This catches all Throwables. If this is really intended, use `case e : Throwable` to clear this warning.
+[[1;34mINFO[m]       case e => e.printStackTrace
+[[1;34mINFO[m]            ^
+[[1;33mWARNING[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/streaming/SparkDrStream.scala:144: warning: This catches all Throwables. If this is really intended, use `case e : Throwable` to clear this warning.
+[[1;34mINFO[m]       case e => e.printStackTrace
+[[1;34mINFO[m]            ^
+[[1;33mWARNING[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/streaming/SparkDrStreamALS.scala:54: warning: This catches all Throwables. If this is really intended, use `case e : Throwable` to clear this warning.
+[[1;34mINFO[m]           case e => e.printStackTrace()
+[[1;34mINFO[m]                ^
+[[1;33mWARNING[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/streaming/SparkDrStreamALS.scala:128: warning: This catches all Throwables. If this is really intended, use `case e : Throwable` to clear this warning.
+[[1;34mINFO[m]       case e => e.printStackTrace
+[[1;34mINFO[m]            ^
+[[1;33mWARNING[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/streaming/SparkDrStreamALS.scala:161: warning: This catches all Throwables. If this is really intended, use `case e : Throwable` to clear this warning.
+[[1;34mINFO[m]       case e => e.printStackTrace
+[[1;34mINFO[m]            ^
+[[1;33mWARNING[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/utils/DBLocalUtils.scala:15: warning: a pure expression does nothing in statement position; you may be omitting necessary parentheses
+[[1;34mINFO[m]   classOf[com.mysql.jdbc.Driver]
+[[1;34mINFO[m]          ^
+[[1;33mWARNING[m] /usr/local/src/movie_recommend/Spark_Movie/src/main/scala/com/zxl/utils/DBUtils.scala:15: warning: a pure expression does nothing in statement position; you may be omitting necessary parentheses
+[[1;34mINFO[m]   classOf[com.mysql.jdbc.Driver]
+[[1;34mINFO[m]          ^
+[[1;33mWARNING[m] 8 warnings found
+[[1;31mERROR[m] two errors found
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  14.250 s
+[[1;34mINFO[m] Finished at: 2019-04-14T01:23:15Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.scala-tools:maven-scala-plugin:2.15.2:compile[m [1m(scala-compile-first)[m on project [36mSpark_Movie[m: [1;31mwrap: org.apache.commons.exec.ExecuteException: Process exited with an error: 1(Exit value: 1)[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
